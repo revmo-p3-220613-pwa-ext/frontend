@@ -88,7 +88,7 @@ function addIncomeToTable(transactions){
         let type = document.createElement('td');
         type.innerHTML = transx.description;
         let amount = document.createElement('td');
-        amount.innerHTML = (transx.amount/100).toFixed(2);
+        amount.innerHTML = (transx.amount).toFixed(2);
         
         let status = document.createElement('td');
         status.innerHTML = transx.typeName;
