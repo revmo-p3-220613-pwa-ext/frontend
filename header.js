@@ -40,14 +40,12 @@ window.addEventListener('load', (e) => {
         logoutBtn.classList.remove('is-hidden');
         loginBtn.classList.add('is-hidden');
         myAccount.classList.remove('is-hidden');
-        transferMoney.classList.remove('is-hidden');
     } else {
         console.log('userId not in session');
         createAccount.classList.remove('is-hidden');
         logoutBtn.classList.add('is-hidden');
         loginBtn.classList.remove('is-hidden');
         myAccount.classList.add('is-hidden');
-        transferMoney.classList.add('is-hidden');
     }
     
 })
