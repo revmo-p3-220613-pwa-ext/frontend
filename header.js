@@ -26,35 +26,34 @@ window.addEventListener('load', (e) => {
     //         'Access-Control-Allow-Origin':'*',
     //     }
     // })
-    console.log("allowed.some(access)", allowed.some(access));
+    // console.log("allowed.some(access)", allowed.some(access));
     // if (loggedIn.status == 404 && !allowed.some(access)){ //not logged in on backend, not on public page
     //     sessionStorage.clear();
     //     window.location.href = "./index.html";
 
     // }
-    console.log(window.location.href.includes("/index.html"))
-    console.log('in window load block header.js');
+    // console.log(window.location.href.includes("/index.html"))
+    // console.log('in window load block header.js');
     if (sessionStorage.getItem('userId') != null){
-        console.log('userId in session');
+        // console.log('userId in session');
         createAccount.classList.add('is-hidden');
         logoutBtn.classList.remove('is-hidden');
         loginBtn.classList.add('is-hidden');
         myAccount.classList.remove('is-hidden');
-        transferMoney.classList.remove('is-hidden');
     } else {
-        console.log('userId not in session');
+        // console.log('userId not in session');
         createAccount.classList.remove('is-hidden');
         logoutBtn.classList.add('is-hidden');
         loginBtn.classList.remove('is-hidden');
         myAccount.classList.add('is-hidden');
-        transferMoney.classList.add('is-hidden');
+
     }
     
 })
 
 
 logoutBtn.addEventListener('click', async (e) => {
-    console.log('click logout');
+    // console.log('click logout');
     
         let result = await fetch(`http://${url}:8080/logout`, {
             'method': 'POST', 
@@ -63,7 +62,7 @@ logoutBtn.addEventListener('click', async (e) => {
                 'Access-Control-Allow-Origin': '*'
             }
         })
-        console.log(result.status);
+        // console.log(result.status);
         e.preventDefault();
         if (result.status === 201) {
             sessionStorage.clear();
