@@ -10,8 +10,10 @@
     <script defer src="/registration.js"></script> 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body">
     <nav class="navbar has-shadow is-light" role="navigation" aria-label="main navigation">
 
   <div class="navbar-brand">
@@ -56,14 +58,26 @@
           <div class="field">
               <label class="label">Email</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Email" id="email-regis-input">
+                <p class="control has-icons-left has-icons-right">
+                  <p class="control has-icons-left">
+                <input class="input" type="email" placeholder="Email" id="email-regis-input">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                  </p>
+                </p>
               </div>
           </div>
 
           <div class="field">
               <label class="label">Password</label>
               <div class="control">
+                <p class="control has-icons-left">
                 <input class="input" type="password" placeholder="Password" id="password-regis-input">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-key"></i>
+                </span>
+              </p>
               </div>
           </div>
           <div class="field">
@@ -81,18 +95,23 @@
           <div class="field">
             <label class="label">Phone Number</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Phone Number (xxx-xxx-xxxx)" id="phone-regis-input">
+              <p class="control has-icons-left">
+              <input class="input" type="tel" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}" placeholder="Phone Number (xxx-xxx-xxxx)" id="phone-regis-input">
+              <span class="icon is-small is-left">
+                <i class="fa fa-phone"></i>
+              </span>
+            </p>
             </div>
           </div>
-          <div class="field">
+          <div class="field is-grouped">
               <div class="control">
                 <button id="redis-btn-2" class="button is-link">Register</button>
               </div>
-
-            <div id="error-messages">
-            </div>
-
-              
+              <div class="control">
+                <button class="button is-danger is-light"><a href="/index.html">
+                  Cancel</a>
+                </button>
+              </div>
           </div>
       </form>
     </div>
