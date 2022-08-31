@@ -108,7 +108,7 @@ submitButton.addEventListener('click', async () => {
       }
   }
 
-  let res = await fetch(`http://127.0.0.1:8080/accounts`, {
+  let res = await fetch(`http://${url}:8080/accounts`, {
       // 'mode': 'no-cors',
       'credentials': 'include',
       'method': 'POST',
